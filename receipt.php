@@ -14,11 +14,22 @@ if (
 
 $trans = $_SESSION['last_transaction'];
 
-// ambil data diskon jika ada
-$subtotal = $trans['total'];
-$diskon   = isset($trans['discount']) ? $trans['discount'] : 0;
-$potongan = $subtotal * $diskon / 100;
-$grandtotal = $subtotal - $potongan;
+/*
+data dari proses_checkout.php:
+subtotal
+discount
+potongan
+total
+payment
+change
+timestamp
+items
+*/
+
+$subtotal   = isset($trans['subtotal']) ? $trans['subtotal'] : 0;
+$diskon     = isset($trans['discount']) ? $trans['discount'] : 0;
+$potongan   = isset($trans['potongan']) ? $trans['potongan'] : 0;
+$grandtotal = isset($trans['total']) ? $trans['total'] : 0;
 ?>
 <!DOCTYPE html>
 <html>
@@ -85,7 +96,7 @@ hr{
 foreach($trans['items'] as $item){
     echo '
     <div class="line">
-        <span>'.$item['name'].' ('.$item['qty'].'x)</span>
+        <span>'.htmlspecialchars($item['name']).' ('.$item['qty'].'x)</span>
         <span>Rp '.number_format($item['subtotal'],0,',','.').'</span>
     </div>
     ';
