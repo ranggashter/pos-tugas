@@ -309,40 +309,53 @@
                 </div>
                 
                 <!-- Totals & Payment -->
-                <div class="totals-box">
-                    <div class="total-row">
-                        <span>Subtotal:</span>
-                        <span>Rp <?php echo number_format($total, 0, ',', '.'); ?></span>
-                    </div>
-                    
-<label>Diskon (%)</label>
-<input type="number" id="discount" value="0" onchange="calculateChange()">
+<!-- Totals & Payment -->
+<div class="totals-box">
 
-<div class="total-row">
-    <span>Potongan:</span>
-    <span id="discountAmount">Rp 0</span>
+    <div class="section-title">💳 PEMBAYARAN</div>
+
+    <div class="total-row">
+        <span>Subtotal</span>
+        <span>Rp <?php echo number_format($total,0,',','.'); ?></span>
+    </div>
+
+    <div class="payment-group">
+        <label>Diskon (%)</label>
+        <input type="number" id="discount" value="0" min="0" max="100" onchange="calculateChange()">
+    </div>
+
+    <div class="total-row">
+        <span>Potongan</span>
+        <span id="discountAmount">Rp 0</span>
+    </div>
+
+    <div class="total-row grand">
+        <span>Total Bayar</span>
+        <span id="grandTotal">Rp <?php echo number_format($total,0,',','.'); ?></span>
+    </div>
+
+    <div class="payment-group">
+        <label>Nominal Bayar (Rp)</label>
+        <input type="number" id="payment" placeholder="Masukkan uang bayar"
+        onchange="calculateChange()" step="100" min="0">
+    </div>
+
+    <div class="total-row">
+        <span>Kembalian</span>
+        <span id="changeAmount">Rp 0</span>
+    </div>
+
+    <div class="buttons-group">
+        <button type="button" class="btn btn-clear" onclick="clearCart()">
+            BERSIHKAN
+        </button>
+
+        <button type="button" class="btn btn-checkout" onclick="checkout()">
+            CHECKOUT
+        </button>
+    </div>
+
 </div>
-                    
-                    <div class="total-row grand">
-                        <span>TOTAL:</span>
-                        <span id="grandTotal">Rp <?php echo number_format($total, 0, ',', '.'); ?></span>
-                    </div>
-                    
-                    <div class="payment-group">
-                        <label>Nominal Bayar (Rp)</label>
-                        <input type="number" id="payment" placeholder="0" onchange="calculateChange()" step="100" min="0">
-                    </div>
-                    
-                    <div class="total-row">
-                        <span>Kembalian:</span>
-                        <span id="changeAmount">Rp 0</span>
-                    </div>
-                    
-                    <div class="buttons-group">
-                        <button type="button" class="btn btn-clear" onclick="clearCart()">BERSIHKAN</button>
-                        <button type="button" class="btn btn-checkout" onclick="checkout()">CHECKOUT</button>
-                    </div>
-                </div>
             </div>
         </div>
         
