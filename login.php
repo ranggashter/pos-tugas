@@ -103,12 +103,6 @@ if (isset($_SESSION['login_error'])) {
             </div>
             <button type="submit" class="btn-login">LOGIN</button>
         </form>
-        
-        <div class="demo-info">
-            <strong>Demo Credentials:</strong>
-            Admin: admin / admin123<br>
-            Kasir: kasir / kasir123
-        </div>
     </div>
 </body>
 </html>
