@@ -39,7 +39,15 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga`, `stok`) VALUES
-(2, 'kondom', 100000, 10);
+(2, 'pensil', 100000, 10),
+(3, 'buku', 20000, 5),
+(4, 'penghapus', 5000, 20),
+(5, 'spidol', 15000, 15),
+(6, 'penggaris', 8000, 8),
+(7, 'bolpoin', 12000, 12),
+(8, 'kertas', 3000, 50),
+(9, 'map', 25000, 7),
+(10, 'tas', 50000, 3);
 
 -- --------------------------------------------------------
 
