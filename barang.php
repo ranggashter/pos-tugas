@@ -187,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     
     <div class="container">
-        <div class="section-title">➕ TAMBAH PRODUK BARU</div>
+        <div class="section-title">TAMBAH PRODUK BARU</div>
         
         <?php if (!empty($error)): ?>
             <div class="message-box error-box">⚠ <?php echo htmlspecialchars($error); ?></div>
@@ -216,14 +216,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
                 <div class="buttons">
-                    <button type="submit" class="btn btn-primary">💾 SIMPAN</button>
-                    <button type="reset" class="btn btn-secondary">↻ BERSIHKAN</button>
+                    <button type="submit" class="btn btn-primary"> SIMPAN</button>
+                    <button type="reset" class="btn btn-secondary"> BERSIHKAN</button>
                 </div>
             </form>
         </div>
         
         <div class="action-links">
-            <a href="tampil_barang.php">📦 Lihat Daftar Barang</a>
+            <a href="tampil_barang.php">Lihat Daftar Barang</a>
         </div>
     </div>
     
