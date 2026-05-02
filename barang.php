@@ -244,7 +244,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             
             if (stok < 0) {
-                alert('Stok tidak boleh negatif!');
+                alert('Stok tidak boleh kurang dari nol!');
                 return false;
             }
             
